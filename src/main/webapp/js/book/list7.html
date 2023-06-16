@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Object</title>
+	<script>
+		//オブジェクトの作成
+		var obj = {
+			name: "まあや",
+			greet: function(){ console.log("はじめまして"); }
+		};
+		obj.greet();
+		
+		//thisキーワード
+		var obj = {
+			name : "maaya",
+			greet: function(){
+				console.log(this.name + "です、はじめまして");
+			}
+		};
+		obj.greet();
+		
+		//callメソッド
+		var obj1 = {
+			name: "まあや",
+			greet: function(age, from) {
+				console.log(this.name + "です、はじめまして");
+				console.log("年齢は" + age + "歳です");
+				console.log("出身地は" + from + "です");
+			}
+		};
+		var obj2 = {
+			name: "すみぺ"
+		};
+		var param = [6, "kyoto"];		
+		obj1.greet.call(obj2, 11, "kumamoto");//2つ目以降の配列を出せる
+		obj1.greet.apply(obj2, param);//2つ目以降の配列を出せる
+		obj1.greet(12, "tokyo");
+		
+		//オブジェクト
+		var today = new Date();
+		console.log("今日は" + today.getFullYear() + 
+		"年" + (today.getMonth() + 1) + "月" + today.getDate() + "日です。");
+		
+		console.log(Math.ceil(1.5)); //切り上げ
+		console.log(Math.floor(1.5));//切り捨て
+		console.log(Math.round(1.5));//四捨五入
+		
+		//Arrayオブジェクト
+		var numbers = [10, 20, 30];
+		numbers.push(40, 50);//要素を追加
+		console.log(numbers);
+		var str = numbers.join(" ");//区切り文字で要素を連結
+		console.log(str);
+		numbers.reverse();//要素の逆転
+		console.log(numbers);
+		var words = ["one", "two", "three", "four", "five"];
+		words.sort();//アルファベット順
+		console.log(words);
+		
+		//sstringオブジェクト
+		var company = "ポニーキャニオン";
+		var index = company.indexOf("キャニオン");//検索文字列の位置
+		var name = company.slice(0, index);//抽出文字列
+		console.log(name);
+		
+		var message = "hello my dear friend";
+		var words = message.split(" ");//文字列を分割
+		console.log(words);
+		
+		//正規表現
+		// /^0[0-9]{1.4}-?[0-9]{1,4}-?[0-9]{4}$/ 電話番号チェックの正規表現
+		var date = "2013年3月31日";
+		var result = date.match(/[0-9]+/g);
+		console.log(result);
+		
+		var date = "This is a pen";
+		var result = date.replace(/is/g, "at");
+		console.log(result);
+		
+		
+	</script>
+</head>
+
+<body>
+	<h1>hhh</h1>
+	<button onclick="history.back();">戻る</button>
+</body>
+
+</html>

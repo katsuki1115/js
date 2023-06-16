@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function setValue(){
+			var elm = document.getElementById("tx1");
+			//var elm = document.getElementsByName("tx1");//集合が出来る→配列に格納
+			elm.value = "Hello!";
+		}
+	</script>
+</head>
+
+<body>
+	<input id="tx1" type="text">
+	<input id="tx2" type="text">
+	<input id="tx3" type="text">
+	<button onclick="setValue();">クリック</button>
+</body>
+
+</html>

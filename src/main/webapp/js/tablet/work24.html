@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		var urls = {
+			'yahoo':'http://www.yahoo.co.jp/',
+			'google':'http://www.google.co.jp/',
+			'amazon':'http://www.amazon.co.jp/'
+		}
+		
+		window.onload = function () {//body部分のコードが読み込まれたときに発動
+			document.getElementById("btn").onclick = function message() {
+				var yahoo = document.getElementByValue("yahoo");
+				var google = document.getElementByValue("google");
+				var amazon = document.getElementByIdValue("amazon");
+				
+				if(yahoo){
+					location.href = urls[yahoo];					
+				}else if(google){
+					location.href = urls[google];
+				}else if(amazon){
+					location.href = urls[amazon];
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div>
+		<select id="url">
+			<option value="">選択してください</option>
+			<option value="yahoo">Yahoo</option>
+			<option value="google">Google</option>
+			<option value="amazon">Amazon</option>
+		</select>
+		<input type="button" id="btn" value="移動" />
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+
+		window.onload = function () {//body部分のコードが読み込まれたときに発動
+			document.getElementById("btn").onclick = function alertImg() {
+				var text = document.getElementById("data");
+				alert(text.value);
+			}
+		}
+		
+		
+		
+	</script>
+</head>
+
+<body>
+	<input type="text" id="data">
+	<button id="btn">クリック</button>
+</body>
+
+</html>

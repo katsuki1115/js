@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function showImage(number) {
+			var htmlstr = "<img src='images/frog" + number + ".jpg'>";
+			document.getElementById("imageArea").innerHTML = htmlstr;
+		}
+
+		window.onload = function () {//body部分のコードが読み込まれたときに発動
+			document.getElementById("btn").onclick = function () {
+				showImage(1);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<button id="btn">読み込み</button>
+	<div id="imageArea">ここに画像が読み込まれます</div>
+</body>
+
+</html>

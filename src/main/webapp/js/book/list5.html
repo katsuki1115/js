@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<script>
+		var color = "青";
+		if (color == "青"){
+			console.log("進む")
+		} else {
+			console.log("止まる")
+		}
+		
+		var a = 2;
+		switch(a) {
+			case 1:
+				console.log("aは1です");
+				break;
+			case 2:
+				console.log("aは2です");
+				break;
+			case 3:
+				console.log("aは3です");
+				break;
+			default: 
+				console.log("一致なし")
+		}
+		
+		var a = 1;
+		while(a <= 100){
+			a *= 2;
+			console.log(a);
+		}
+		console.log("終了");
+		
+		for (var i = 1; i <= 5 ; i++){
+			console.log(i + "回目");
+		}
+		
+		var number = [10, 20, 30];
+		for (var i = 0 ; i < number.length ; i++){
+			console.log(number[i]);
+		}
+		
+		var favorites = {
+			food : "カレー",
+			color : "青",// キー : 値 とする
+			number : "7" //主キー
+		};
+		for (var key in favorites){
+			console.log(key + ' : ' + favorites[key]);
+		}
+		
+		var tickets = [ "指定席", "自由席", "指定席", "自由席", "指定席"];
+		for ( var i = 0 ; i < tickets.length ; i++) {
+			if (tickets[i] == "自由席"){
+				continue;
+			}
+			console.log(i + " : " + tickets[i]);
+		}
+		console.log("終了");
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

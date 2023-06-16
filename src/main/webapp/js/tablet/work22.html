@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		window.onload = function () {//body部分のコードが読み込まれたときに発動
+			document.getElementById("start").onclick = function message() {
+				var contents = document.getElementById("contents");
+				var messe = contents.textContent;
+				document.getElementById("target").innerHTML = messe;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div><input type="button" id="start" value="スタート" /></div>
+	<div id="contents">こんにちは</div>
+	<div id="target"></div>
+</body>
+
+</html>

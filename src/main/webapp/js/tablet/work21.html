@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		window.onload = function () {//body部分のコードが読み込まれたときに発動
+			document.getElementById("start").onclick = function message() {
+				var message = document.getElementById("message");
+				var loop = document.getElementById("loop");
+				var total = parseInt(loop.value);
+				var Message = ""
+				for (var i = 0; i < total; i++) {
+					Message += message.value + "\n";
+				}
+				document.getElementById("result").innerHTML = Message;
+				//console.log(document.getElementById("result").value);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div>メッセージ<input type="text" id="message" /></div>
+	<div>繰り返し回数<input type="text" id="loop" /></div>
+	<div><input type="button" id="start" value="スタート" /></div>
+	<div id="result"></div>
+</body>
+
+</html>

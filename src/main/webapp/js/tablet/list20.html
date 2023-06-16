@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		window.onload = function () {//body部分のコードが読み込まれたときに発動
+
+			document.getElementById("btn").onclick = function judgement() {
+				var age = document.getElementById("age");
+				var result = "";
+				var Page = parseInt(age.value);
+				if (Page >= 20) {
+					result = "20歳以上です";
+				} else if (Page < 20) {
+					result = "20歳未満です";
+				} else {
+					result = "数値を入力してください";
+				}
+				document.getElementById("result").value = result;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td>年齢<input type="text" id="age" /></td>
+		</tr>
+		<tr>
+			<td>結果<input id="result" /></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="button" id="btn" value="実行" /></td>
+		</tr>
+	</table>
+</body>
+
+</html>

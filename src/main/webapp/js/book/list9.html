@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<script>
+		function check(){
+			var result = confirm("確認用のメッセージを表示します");
+			if (!confirm("よろしいですか？")) {
+				location.href="http://www.google.co.jp/";
+				console.log("OK");
+			}else {
+				console.log("キャンセル");
+			}
+		}
+		
+		var count = 0;
+		var timer = setInterval(output, 1000);
+		function output(){
+			count++;
+			console.log(count + "秒経過");
+			if(count >= 10) {
+				clearInterval(timer);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<button onclick="check();">クリック</button>
+	<button onclick="open('list9_b.html', null, 'width=300, height=150');">開く</button>
+	<form name="frm">
+		<input type="text" name="message">
+	</form>
+</body>
+
+</html>

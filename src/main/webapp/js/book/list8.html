@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>イベント</title>
+</head>
+<script>
+	function sayHello(){
+		alert("こんにちは");
+	}
+	
+	function check(e){
+		console.log(e.value + "がクリックされました");
+	}
+	
+</script>
+
+<body onload="console.log('こんにちは');">
+	<button onclick="alert('こんにちは')">クリック</button>//""''の中には同じものを追加しない
+	<button onclick="sayHello();">クリック</button>
+	
+	//loadイベント
+	<img src="images/frog1.jpg" onmouseover="console.log('カーソルが乗っています');" onmouseout="console.log('カーソルが外れました');">
+	<input type="text" onfocus="console.log('フォーカスを取得しました');" onblur="console.log('フォーカスを外しました')">
+	
+	//<p></p>
+	<select onchange="console.log('項目が変更されました');">
+		<option>リンゴ</option>
+		<option>イチゴ</option>
+		<option>みかん</option>
+		<option>なし</option>
+	</select>
+	
+	<input type="button" value="ボタン1" onclick="check(this);">
+	<input type="button" value="ボタン2" onclick="check(this);">
+	<input type="button" value="ボタン3" onclick="check(this);">
+
+	<button onclick="location.href='list7.html';">移動する</button>
+</body>
+
+</html>

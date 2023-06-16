@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		var Item = function (price, unit) {
+			this.price = price;
+			this.unit = unit;
+		};
+		Item.prototype.getTotal = function () {
+			return this.price * this.unit;
+		};
+		var data = [new Item(120, 3), new Item(30, 2), new Item(80, 1), new Item(100, 3)];
+
+		var sum = 0;
+		for (var i = 0; i < data.length; i++) {
+			sum += data[i].getTotal();
+		}
+		console.log(sum);
+
+		var s1 = {"name": "yamada", "score": 92};
+		var s2 = {"name": "sato", "score": 88};
+		var s3 = {"name": "suzuki", "score": 90};
+		var s4 = {"name": "yamamoto", "score": 85};
+		var data = [s1, s2, s3, s4];
+		for (var i = 0; i < data.length; i++) {
+			if (data[i].score >= 90) {
+				console.log(data[i].name);
+			}
+		}
+
+		var text = "Do you have a pen";
+		var words = text.split(" ");//文字列を分割
+		for (var i = 0; i < words.length; i++) {
+			console.log(words[i]);
+		}
+
+		var text = "RedBlueGreenWhitePurple";
+		var query = "Green";
+		var result = text.indexOf(query);
+		if (result != NaN) {
+			console.log("I found");
+		}
+	</script>
+</head>
+
+<body onload="alert('ようこそ');">
+	<button id="btn" onclick="alert('こんにちは')">クリック時こんにちは</button>
+</body>
+
+</html>

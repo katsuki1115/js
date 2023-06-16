@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="sample.js"></script>
+</head>
+<body>
+	<script>
+		alert("Hello World!");
+		console.log("Hello World!");
+		var a = 10;
+		console.log(a);
+		var number = [10, 20, 30];
+		number[9] = 99;
+		number[4] = 40;
+		console.log(number);
+		
+		//連想配列
+		var favorites = {
+			food : "カレー",
+			color : "青",// キー : 値 とする
+			number : "7" //主キー
+		};
+		console.log(favorites.color);
+		console.log(favorites.food);
+		console.log(favorites.number);
+		
+		//キーを変数に入れる
+		var key = "food";
+		console.log(favorites[key]);
+		
+		//要素を追加
+		favorites.sports = "サッカー";
+		console.log(favorites.sports);
+		
+		
+		var favorites = {
+			"食べ物" : "カレー",
+			"色" : "青",
+			"数字" : "7" //主キー
+		};
+		//console.log(favorites."食べ物") これはできない
+		
+		
+	</script>
+</body>
+</html>

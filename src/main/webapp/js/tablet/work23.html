@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		window.onload = function () {//body部分のコードが読み込まれたときに発動
+			document.getElementById("start").onclick = function message() {
+				var neme = document.getElementById("name");
+				var age = document.getElementById("age");
+				var hobby = document.getElementById("hobby");
+				
+				var str = {"名前": neme.value, "年齢": age.value, "趣味": hobby.value};
+				var messe = "";
+				for (var key in str){
+					messe += key + ":" + str[key] + "\n";
+				}
+				
+				
+				document.getElementById("target").innerHTML = messe;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<table border="1">
+		<tr>
+			<th>名前</th>
+			<td><input type="text" id="name" /></td>
+		</tr>
+
+		<tr>
+			<th>年齢</th>
+			<td><input type="text" id="age" /></td>
+		</tr>
+
+		<tr>
+			<th>趣味</th>
+			<td><input type="text" id="hobby" /></td>
+		</tr>
+	</table>
+	<div><input type="button" id="start" value="スタート" /></div>
+	<div id="target"></div>
+</body>
+
+</html>
