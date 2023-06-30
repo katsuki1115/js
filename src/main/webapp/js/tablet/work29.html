@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		var timer = null;
+		var message = "タイムアップ";
+		window.onload = function () {//body部分のコードが読み込まれたときに発動
+			document.getElementById("start").onclick = function time() {
+				var count = 0;
+				var timer = setInterval(output, 1000);
+				function output() {
+					count++;
+					console.log(count + "秒経過");
+					if (count >= 5) {
+						clearInterval(timer);
+						document.getElementById("message").innerHTML = message;
+					}
+				}
+			};
+		};
+	</script>
+</head>
+
+<body>
+	<input type="button" id="start" value="スタート" />
+	<div id="message"></div>
+</body>
+
+</html>

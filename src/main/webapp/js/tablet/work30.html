@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		var timer = null;
+		window.onload = function () {//body部分のコードが読み込まれたときに発動
+			document.getElementById("start").onclick = function time() {
+				//クリア
+				var message = null;
+				document.getElementById("message").innerHTML = message;
+
+				var count = document.getElementById("count");
+				var Count = parseInt(count.value);
+				
+				var timer = setInterval(output, 1000);
+				function output() {
+					Count--;
+					console.log("残り" + Count + "秒");
+					if (Count == 0) {
+						clearInterval(timer);
+						var message = "タイムアップ!";
+						document.getElementById("message").innerHTML = message;
+					}
+				}
+			};
+		};
+	</script>
+</head>
+
+<body>
+	<input type="text" id="count" value="10" />
+	<input type="button" id="start" value="スタート" />
+	<div id="message"></div>
+</body>
+
+</html>

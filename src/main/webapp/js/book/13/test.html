@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script>
+		$(function () {
+			var q = encodeURIComponent("アシアル株式会社");
+			$.getJSON("http://search.twitter.com/search.json?callback=?&q=" + q, function (data) {
+				for (var i = 0; i < data.search.length; i++) {
+					$("table").append(
+						"<tr>" + "<td><img src='" + data.results[i].profile_image_url + "'></td>" +
+						"<td>@" + data.results[i].from_user + "</td>" + "<td>" + 
+							data.results[i].from_user_name +"</td>" + 
+						"<td>" + data.results[i].text + "</td>"+ "</tr>"
+					)
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<table id="dataTable">
+		<tr>
+			<th>プロフ画像</th>
+			<th>アカウント</th>
+			<th>名前</th>
+			<th>ツイート</th>
+		</tr>
+	</table>
+</body>
+
+</html>
